@@ -1,9 +1,12 @@
+// Get references to DOM elements
+
 const citySelect = document.getElementById('city-select');
 const currentLocationBtn = document.getElementById('current-location-btn');
 const messageEl = document.getElementById('message');
 const errorEl = document.getElementById('error-message');
 const resultsEl = document.getElementById('results');
 const locationTitle = document.getElementById('location-title');
+// Fetch sunrise and sunset data for today and tomorrow
 
 async function fetchSunData(lat, lng, locationName) {
   const baseUrl = 'https://api.sunrisesunset.io/json';
@@ -36,6 +39,7 @@ async function fetchSunData(lat, lng, locationName) {
     errorEl.style.display = 'block';
   }
 }
+// Helper function to update day sections with API results
 
 function updateDay(data, prefix) {
   document.getElementById(`${prefix}-sunrise`).textContent = data.sunrise;
@@ -52,6 +56,7 @@ citySelect.addEventListener('change', () => {
   const name = citySelect.options[citySelect.selectedIndex].text;
   fetchSunData(lat, lng, name);
 });
+// Handle current location button click
 
 currentLocationBtn.addEventListener('click', () => {
   if (navigator.geolocation) {
