@@ -1,10 +1,13 @@
+/* General page styling and fonts */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
     color: #333;
   }
-  
+  /* Gradient header styling */
+
   header {
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: #fff;
@@ -83,7 +86,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
   }
-  
+  /* Card layout and hover effects */
+
   .day-card {
     background: linear-gradient(to top right, #ffffff, #f0f4f8);
     padding: 1.2rem;
@@ -125,7 +129,8 @@ body {
     color: #fff;
     text-decoration: underline;
   }
-  
+  /* Responsive adjustments for mobile screens */
+
   @media (max-width: 600px) {
     header h1 {
       font-size: 1.6rem;
