@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITMD 541 - Lab 6 | Sunrise & Sunset Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ITMD 541 – Lab 6 </h1>
+    <p>Sunrise & Sunset Information Dashboard</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="city-select">Choose a City:</label>
+      <select id="city-select">
+        <option value="" disabled selected>Select a city</option>
+        <option value="41.8781,-87.6298">Chicago, USA</option>
+        <option value="40.7128,-74.0060">New York, USA</option>
+        <option value="34.0522,-118.2437">Los Angeles, USA</option>
+        <option value="37.7749,-122.4194">San Francisco, USA</option>
+        <option value="25.7617,-80.1918">Miami, USA</option>
+        <option value="47.6062,-122.3321">Seattle, USA</option>
+        <option value="30.2672,-97.7431">Austin, USA</option>
+        <option value="12.9716,77.5946">Bengaluru, India</option>
+        <option value="17.3850,78.4867">Hyderabad, India</option>
+        <option value="42.3601,-71.0589">Boston, USA</option>
+      </select>
+      <button id="current-location-btn">📍 Use Current Location</button>
+    </section>
+
+    <section id="message" class="message">
+      Please select a city or use your current location to see data.
+    </section>
+
+    <section id="error-message" class="error-message" style="display:none;"></section>
+
+    <section id="results" class="results" style="display:none;">
+      <h2 id="location-title"></h2>
+      <div class="day-grid">
+        <div class="day-card">
+          <h3>Today</h3>
+          <ul>
+            <li>🌅 Sunrise: <span id="today-sunrise"></span></li>
+            <li>🌇 Sunset: <span id="today-sunset"></span></li>
+            <li>🌄 Dawn: <span id="today-dawn"></span></li>
+            <li>🌆 Dusk: <span id="today-dusk"></span></li>
+            <li>☀️ Solar Noon: <span id="today-noon"></span></li>
+            <li>🕰 Day Length: <span id="today-length"></span></li>
+            <li>🌍 Timezone: <span id="today-timezone"></span></li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <h3>Tomorrow</h3>
+          <ul>
+            <li>🌅 Sunrise: <span id="tomorrow-sunrise"></span></li>
+            <li>🌇 Sunset: <span id="tomorrow-sunset"></span></li>
+            <li>🌄 Dawn: <span id="tomorrow-dawn"></span></li>
+            <li>🌆 Dusk: <span id="tomorrow-dusk"></span></li>
+            <li>☀️ Solar Noon: <span id="tomorrow-noon"></span></li>
+            <li>🕰 Day Length: <span id="tomorrow-length"></span></li>
+            <li>🌍 Timezone: <span id="tomorrow-timezone"></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🌐 API Credit: <a href="https://sunrisesunset.io/" target="_blank">SunriseSunset.io</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

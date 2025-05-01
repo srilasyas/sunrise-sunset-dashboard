@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  
+  header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .controls label {
+    font-weight: bold;
+  }
+  
+  select, button {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  select {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  button {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .message, .error-message {
+    text-align: center;
+    margin: 1rem;
+    font-style: italic;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    font-weight: bold;
+  }
+  
+  .results {
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .day-card {
+    background: linear-gradient(to top right, #ffffff, #f0f4f8);
+    padding: 1.2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .day-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .day-card h3 {
+    text-align: center;
+    color: #4facfe;
+    margin-bottom: 0.8rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+  }
+  
+  footer {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.6rem;
+    }
+  
+    .controls {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
